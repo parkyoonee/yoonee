@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/183b694fdd.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script>
+        $(function(){
+            $('.menubar').click(function(){
+                $('#navlist').slideToggle()
+            })
+        })
+    </script>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+
+        header{
+            background: white;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            box-shadow: 0px 0px 10px #000000;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+        header>#logo{
+            width: 50%;
+            font-size: 20px;
+            line-height: 70px;
+            padding-left: 30px;
+            display: flex;
+        }
+        .menubar{
+            position: absolute;
+            right: 0;
+            font-size: 20px;
+            margin: 25px 20px 0 0;
+            display: none;
+        }
+        nav{
+            width: 50%;
+            text-align: right;
+            margin-right: 30px;
+        }
+        #navlist>a>li{
+            display: inline-block;
+            width: 10%;
+            line-height: 70px;
+            text-align: center;
+        }
+        #navlist>a>li:hover{
+            background: #cccccc77;
+            /* color: white; */
+        }
+
+        main{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .swiper-slide>img{
+            width: 100%;
+            height: calc(100vh - 70px);
+            position: relative;
+        }
+        #text{
+            position: absolute;
+            top: 45%; left: calc(50% - 170px);
+            font-size: 50px;
+            color: white;
+            z-index: 99999;
+        }
+        #text>span{
+            background: #0000008e;
+            padding: 5px 20px;
+        }
+
+        #project{padding-top: 15px;}
+        #project>h3{font-size: 30px; margin: 80px 30px 20px 0;} 
+        #projectlist{padding-top: 20px;}
+        #projectlist>li{
+            display: inline-block;
+            width: 24.5%;
+            padding: 5px;
+            position: relative;
+        }
+        #projectlist>li>img{
+            width: 100%;
+            height: 30vh;
+        }
+        #projectlist>li>p{
+            position: absolute;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.616);
+            color: white;
+            padding: 15px;
+        }
+
+        #about{padding-top: 15px;}
+        #about>h3{font-size: 30px; margin: 80px 30px 20px 0;}
+        #about>p{padding-top: 20px;}
+        #aboutlist{margin-top: 50px;}
+        #aboutlist>li{
+            display: inline-block;
+            width: 24.5%;
+            padding: 5px;
+        }
+        #aboutlist>li>div>img{
+            width: 100%;
+            height: 30vh;
+            margin-bottom: 15px;
+        }
+        #aboutlist>li>div>h4{
+            color: gray;
+            margin: 15px 0;
+        }
+        #aboutlist>li>div>button{
+            width: 100%;
+            height: 50px;
+            border: none;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        #contact{padding-top: 15px;}
+        #contact>form>h3{font-size: 30px; margin: 80px 30px 20px 0;} 
+        #contact>form>p{padding-top: 15px;}
+        #contact>form>input{
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        #contact>form>#btn1{
+            border: none;
+            background: black;
+            color: white;
+            width: 130px;
+            height: 40px;
+            margin: 10px 0;
+        }
+        #map{margin: 15px;}
+
+        footer{
+            width: 100%;
+            height: 70px;
+            background: rgb(231, 231, 231);
+            text-align: center;
+            line-height: 70px;
+            font-size: 12px;
+        }
+
+
+        @media screen and (max-width:600px) {
+            header{display: block;}
+            header>.menubar{display: block;}
+            header>#logo{width: 100%;}
+            nav{width: 100%; text-align: center;}
+            #mainimg{height: 60vh}
+            #navlist{background: rgba(255, 255, 255, 0.733);  display: none;}
+            #navlist>a>li{width: 100%; font-weight: bold;}
+            #mainimg{width: 100%;}
+            #projectlist>li{width: 100%;}
+            #aboutlist>li{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <i class="fas fa-bars menubar"></i>
+            <div id="logo">
+                <a href=""><p><b>BR</b> A r c h i t e c t s</p></a>
+            </div>
+            <nav>
+                <ul id="navlist">
+                    <a href="#project"><li>Project</li></a>
+                    <a href="#about"><li>About</li></a>
+                    <a href="#contact"><li>Contact</li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="mainimg" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="imgs/architecture-1048092_1280.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="imgs/skyscrapers-3184798_1280.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="imgs/buildings-1804481_1280.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="imgs/architecture-2256489_1280.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next" style="color: white;"></div>
+                  <div class="swiper-button-prev" style="color: white;"></div>
+                  <div class="swiper-pagination"></div>
+                <div id="text">
+                    <span><b>BR</b></span> Architects
+                </div>
+            </section>
+            <section id="project">
+                <h3>Project</h3><hr>
+                <ul id="projectlist">
+                    <li>
+                        <!-- <div></div> -->
+                        <img src="imgs/house-1477041_1280.jpg">
+                        <p>Summer</p>
+                    </li>
+                    <li>
+                        <img src="imgs/house-1836070_1280.jpg">
+                        <p>Brick House</p>
+                    </li>
+                    <li>
+                        <img src="imgs/house-540796_1280.jpg">
+                        <p>Renovated</p>
+                    </li>
+                    <li>
+                        <img src="imgs/stilt-house-1626354_1280.jpg">
+                        <p>Barn House</p>
+                    </li>
+                    <li>
+                        <img src="imgs/lake-1681485_1280.jpg">
+                        <p>Summer</p>
+                    </li>
+                    <li>
+                        <img src="imgs/lake-192990_1280.jpg">
+                        <p>Brick House</p>
+                    </li>
+                    <li>
+                        <img src="imgs/log-cabin-1886620_1280.jpg">
+                        <p>Renovated</p>
+                    </li>
+                    <li>
+                        <img src="imgs/mountains-1587287_1280.jpg">
+                        <p>Barn House</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="about">
+                <h3>About</h3><hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Consequatur magni nostrum excepturi cupiditate nemo 
+                    ipsum ratione blanditiis accusantium ipsam voluptatem odio aut, 
+                    fugit corporis laborum quisquam! Earum praesentium quos culpa.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Consequatur magni nostrum excepturi cupiditate nemo 
+                    ipsum ratione blanditiis accusantium ipsam voluptatem odio aut, 
+                    fugit corporis laborum quisquam! Earum praesentium quos culpa.
+                </p>
+                <ul id="aboutlist">
+                    <li>
+                        <div>
+                            <img src="imgs/portrait-3204843_1280.jpg">
+                            <h3>John Doe</h3>
+                            <h4>CEO & Founder</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Eos nihil corrupti id ad recusandae suscipit aliquam architecto vero odit, 
+                                deleniti amet!</p>
+                            <button>Contact</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="imgs/portrait-1535271_1280.jpg">
+                            <h3>John Doe</h3>
+                            <h4>Architect</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Eos nihil corrupti id ad recusandae suscipit aliquam architecto vero odit, 
+                                deleniti amet!</p>
+                            <button>Contact</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="imgs/portrait-1535270_1280.jpg">
+                            <h3>John Doe</h3>
+                            <h4>Architect</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Eos nihil corrupti id ad recusandae suscipit aliquam architecto vero odit, 
+                                deleniti amet!</p>
+                            <button>Contact</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="imgs/woman-2303361_1280.jpg">
+                            <h3>John Doe</h3>
+                            <h4>Architect</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Eos nihil corrupti id ad recusandae suscipit aliquam architecto vero odit, 
+                                deleniti amet!</p>
+                            <button>Contact</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="contact">
+                <form action="">
+                <h3>Contact</h3><hr>
+                <p>Lets get in touch abd talk about your next project</p>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Subject" required>
+                <input type="text" placeholder="Comment" required>
+                <input type="submit" value="SEBD MESSAGE" id="btn1">
+                </form>
+            </section>
+            <section id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.556158581915!2d126.76836327636512!3d37.65963751878319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c854556eb3abb%3A0xc66cfd386bcf5a01!2z642U7KGw7J2A7Lu07ZOo7YSw7ZWZ7JuQIOydvOyCsOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1695265478483!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+        <footer>
+            <p><b>BR</b> A r c h i t e c t s ⓒ copyright all right reserved.</p>
+        </footer>
+
+        <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: true,
+    });
+        </script>
+</body>
+</html>
